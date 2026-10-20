@@ -1,0 +1,229 @@
+
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>我的個人介紹網站</title>
+
+    <style>
+        /* 網站整體樣式 */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "Noto Sans TC", Arial, sans-serif;
+            background: #f4f7fb;
+            color: #243047;
+            line-height: 1.8;
+        }
+
+        /* 導覽列 */
+        header {
+            background: #172554;
+            color: white;
+            padding: 18px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 {
+            font-size: 22px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+        }
+
+        nav a:hover {
+            color: #93c5fd;
+        }
+
+        /* 個人介紹主區塊 */
+        .hero {
+            min-height: 75vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        .avatar {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            background: #dbeafe;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 64px;
+            margin-bottom: 24px;
+            border: 5px solid white;
+            box-shadow: 0 8px 25px #00000012;
+        }
+
+        .hero h2 {
+            font-size: clamp(30px, 5vw, 46px);
+            margin-bottom: 12px;
+        }
+
+        .hero h2 span {
+            color: #2563eb;
+        }
+
+        .hero p {
+            max-width: 560px;
+            color: #64748b;
+            margin-bottom: 24px;
+        }
+
+        .button {
+            display: inline-block;
+            background: #2563eb;
+            color: white;
+            text-decoration: none;
+            padding: 12px 28px;
+            border-radius: 30px;
+            transition: 0.3s;
+        }
+
+        .button:hover {
+            background: #1d4ed8;
+            transform: translateY(-3px);
+        }
+
+        /* 關於我 */
+        .about {
+            background: white;
+            padding: 60px 8%;
+            text-align: center;
+        }
+
+        .about h2 {
+            margin-bottom: 20px;
+            font-size: 30px;
+        }
+
+        .about p {
+            max-width: 700px;
+            margin: 0 auto;
+            color: #64748b;
+        }
+
+        /* 技能區塊 */
+        .skills {
+            padding: 60px 8%;
+            text-align: center;
+        }
+
+        .skills h2 {
+            font-size: 30px;
+            margin-bottom: 28px;
+        }
+
+        .skill-list {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
+        .skill {
+            background: white;
+            padding: 16px 28px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px #00000008;
+        }
+
+        /* 頁尾 */
+        footer {
+            background: #172554;
+            color: white;
+            text-align: center;
+            padding: 24px;
+        }
+
+        /* 手機版 */
+        @media (max-width: 600px) {
+            header {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            nav a {
+                margin: 0 8px;
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- 網站導覽列 -->
+    <header>
+        <h1>我的個人網站</h1>
+
+        <nav aria-label="主要導覽">
+            <a href="#home">首頁</a>
+            <a href="#about">關於我</a>
+            <a href="#skills">我的技能</a>
+        </nav>
+    </header>
+
+    <!-- 首頁介紹 -->
+    <main>
+        <section class="hero" id="home">
+            <div class="avatar" aria-label="人物圖示">👨‍💻</div>
+
+            <h2>你好，我是<span>你的名字</span></h2>
+
+            <p>
+                歡迎來到我的個人網站！
+                我是一位熱愛學習、喜歡探索新事物的人，
+                正在努力發展自己的專業能力。
+            </p>
+
+            <a href="#about" class="button">認識更多關於我</a>
+        </section>
+
+        <!-- 關於我 -->
+        <section class="about" id="about">
+            <h2>關於我</h2>
+
+            <p>
+                這裡可以介紹你的學歷、工作經驗、個人興趣
+                和未來目標。你可以分享自己的故事，
+                讓瀏覽網站的人更了解你。
+            </p>
+        </section>
+
+        <!-- 我的技能 -->
+        <section class="skills" id="skills">
+            <h2>我的技能與興趣</h2>
+
+            <div class="skill-list">
+                <div class="skill">💻 網頁設計</div>
+                <div class="skill">📚 持續學習</div>
+                <div class="skill">🎨 創意思考</div>
+                <div class="skill">🤝 團隊合作</div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 頁尾 -->
+    <footer>
+        <p>© 2026 我的個人網站｜由我親手打造</p>
+    </footer>
+
+</body>
+</html>
